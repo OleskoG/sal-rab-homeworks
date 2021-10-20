@@ -20,4 +20,3 @@ function renderProductsCards(json) {
             addProduct (products[i]);
           }
 }
-s
