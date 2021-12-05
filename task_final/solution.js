@@ -1,5 +1,5 @@
-function sendRequest(name, phone, address [street, house, entrance, floor, flat], goods, sum) {
-    let data = {client: '', order {address: '', sum: ''}, goods: ''}; 
+function sendRequest (name, phone, address [street, house, entrance, floor, flat], goods, sum) {
+    let data = {client: '', order {address: [], sum: ''}, goods: []}; 
 }
 
     let countOfGoods = goods.length;
@@ -9,11 +9,11 @@ function sendRequest(name, phone, address [street, house, entrance, floor, flat]
         
     }
 
-    data.order.address = "ул. ${street}, дом ${house}, подъезд ${entrance}, этаж ${floor}, кв. ${flat}" ;
+    data.order.address = "ул. ${street}, дом ${house}, ${entrance} подъезд, ${floor} этаж, кв. ${flat}" ;
     data.order.sum = sum;
 
     data.client = '${name} ${phone}';
 
-    let jsonData = JSON.stringify({data: data}); 
+    let jsonData = JSON.stringify(data); 
 
     return jsonData;
